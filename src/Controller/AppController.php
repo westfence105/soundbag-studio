@@ -51,4 +51,8 @@ class AppController extends Controller
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
     }
+    
+    public function beforeFilter( Event $event ){
+		$this->set('tb_footer','Element/footer');
+	}
 }

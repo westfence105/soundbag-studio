@@ -19,6 +19,8 @@ use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 
+use App\Form\ContactForm;
+
 /**
  * Static content controller
  *
@@ -38,8 +40,11 @@ class PagesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
-    public function display(...$path)
+    public function display( $path, $lang = '' )
     {
+		if( $lang ){
+			\Cake\I18n\I18n::setLocale($lang);
+		}
         $count = count($path);
         if (!$count) {
             return $this->redirect('/');
@@ -66,4 +71,21 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+    
+    public function index( $lang = 'ja' ){
+		$this->viewBuilder()->setLayout('');
+		$this->set('lang',$lang);
+		
+		$contact = new ContactForm();
+		if( $this->request->is('post') ){
+			if( $contact->execute( $this->request->data() ) ){
+				$this->Flash->success(__('問い合わせを受け付けました。'));
+			}
+			else {
+				$this->Flash->error(__('フォームの内容が不正、または内部エラーが発生しました。'));
+			}
+		}
+		
+		$this->set('contact',$contact);
+	}
 }
