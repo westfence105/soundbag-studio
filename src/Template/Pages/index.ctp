@@ -48,7 +48,7 @@
 				'https://fonts.googleapis.com/css?family=Montserrat:400,700',
 				'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic',
 				'/magnific-popup/magnific-popup.css',
-				'freelancer.min'
+				'freelancer.min', 'my'
 			]
 		);
 	 ?>
@@ -94,7 +94,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
+    <header class="masthead bg-title text-white text-center">
       <div class="container">
      <!--   <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt=""> -->
         <h1 class="font-weight-bold mb-0">soundbag</h1>
@@ -104,9 +104,9 @@
     </header>
 
     <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
+    <section class="bg-about mb-0 px-8" id="about">
       <div class="container">
-        <h2 class="text-center text-uppercase text-white">About</h2>
+        <h2 class="text-center text-uppercase">About</h2>
         <hr class="star-light mb-5">
         <div class="row">
 		  <?php foreach( $about as $lead ): ?>
@@ -116,10 +116,10 @@
       </div>
     </section>
     
-    <section class="bg-white text-black mb-0" id="software">
+    <section class="bg-software text-black mb-0 px-8" id="software">
       <div class="container">
         <h2 class="text-center text-uppercase text-black">Software</h2>
-        <hr class="star-light mb-5">
+        <hr class="star-dark mb-5">
         <div class="row">
 		  <?php foreach( $software as $lead ): ?>
               <p class="lead"><?= $lead ?></p>
@@ -128,10 +128,10 @@
       </div>
     </section>
     
-    <section class="bg-primary text-white mb-0" id="music">
+    <section class="bg-music mb-0 px-8" id="music">
       <div class="container">
-        <h2 class="text-center text-uppercase text-white">Music</h2>
-        <hr class="star-light mb-5">
+        <h2 class="text-center text-uppercase">Music</h2>
+        <hr class="star-dark mb-5">
         <div class="row">
 		  <?php foreach( $music as $lead ): ?>
               <p class="lead"><?= $lead ?></p>
@@ -172,11 +172,10 @@
 
     <!-- Footer -->
     <footer class="footer text-center">
-      <div class="container">
-        <div class="row">
-		  <div class="col-md-2"></div>
-          <div class="col-md-8">
-            <ul class="list-inline mb-0">
+      <div class="">
+        <div class="row border-0">
+          <div class="col-12">
+            <ul class="list-inline mb-0 px-0">
 			  <!--
               <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
@@ -200,11 +199,16 @@
                 </a>
               </li>
               <li class="list-inline-item">
-				<a class="btn btn-outline-light text-center" href="https://coconala.com/users/500654"><b>Coconala</b></a>
+				<a class="btn btn-outline-light text-center btn-txt" href="https://www.lancers.jp/profile/westfence105"><b>Lancers</b></a>
+              </li>
+              <li class="list-inline-item">
+				<a class="btn btn-outline-light text-center btn-txt" href="https://crowdworks.jp/public/employees/106838"><b>CrowdWorks</b></a>
+              </li>
+              <li class="list-inline-item">
+				<a class="btn btn-outline-light text-center btn-txt" href="https://coconala.com/users/500654"><b>Coconala</b></a>
               </li>
             </ul>
           </div>
-		  <div class="col-md-2"></div>
         </div>
       </div>
     </footer>

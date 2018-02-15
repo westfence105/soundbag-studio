@@ -1,0 +1,67 @@
+.bg-primary {
+	background-color: #685!important;
+}
+
+button.bg-primary:focus, button.bg-primary:hover {
+	background-color: #8a6!important;
+}
+
+header {
+    background-color: #44f!important;
+}
+
+header hr:after {
+	background-color: #44f!important;
+}
+
+#about {
+	color: #000!important;
+	background-color: #3c3!important;
+}
+
+#about hr {
+	border-color: #000!important;
+}
+
+#about hr:after {
+	color: #000!important;
+	background-color: #3c3!important;
+}
+
+#software {
+	background-color: #ff4!important;
+	color: #002!important;
+}
+
+#software hr {
+	border-color: #002!important;
+}
+
+#software hr:after {
+	color: #002!important;
+	background-color: #ff4!important;
+}
+
+#music {
+	color: #000!important;
+	background-color: #8cf!important;
+}
+
+#music hr {
+	border-color: #000!important;
+}
+
+#music hr:after {
+	color: #000!important;
+	background-color: #8cf!important;
+}
+
+.footer {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	background-color: #236!important;
+}
+
+.list-inline-item {
+	font-size: calc(18px * 0.25vw);
+}
