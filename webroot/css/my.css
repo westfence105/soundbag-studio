@@ -6,12 +6,23 @@ button.bg-primary:focus, button.bg-primary:hover {
 	background-color: #8a6!important;
 }
 
-header {
-    background-color: #44f!important;
+#mainNav {
+	padding-top: 1.0rem!important;
+	padding-bottom: 1.0rem!important;
+}
+
+header.masthead {
+	height: 100vh;
+	padding-top: 40vh;
+	background-color: #44f!important;
 }
 
 header hr:after {
 	background-color: #44f!important;
+}
+
+header container {
+	
 }
 
 #about {

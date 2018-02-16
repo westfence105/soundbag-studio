@@ -94,7 +94,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead bg-title text-white text-center">
+    <header class="masthead bg-title text-white text-center va-middle">
       <div class="container">
      <!--   <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt=""> -->
         <h1 class="font-weight-bold mb-0">soundbag</h1>
