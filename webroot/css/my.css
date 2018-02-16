@@ -1,3 +1,15 @@
+a {
+	color: #f00;
+}
+
+a:hover {
+	color: #f22;
+}
+
+.copyright a {
+	color: #f88;
+}
+
 .bg-primary {
 	background-color: #685!important;
 }
@@ -65,6 +77,11 @@ header container {
 #music hr:after {
 	color: #000!important;
 	background-color: #8cf!important;
+}
+
+.bg-form {
+	padding: 5vw;
+	background-color: #afc;
 }
 
 .footer {

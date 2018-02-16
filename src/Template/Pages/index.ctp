@@ -1,6 +1,12 @@
 <?php
 	use Cake\Core\Configure;
 	
+	$twitter_url = 'https://twitter.com/westfence105';
+	$github_url = 'https://github.com/westfence105';
+	$lancers_url = 'https://www.lancers.jp/profile/westfence105';
+	$crowdworks_url = 'https://crowdworks.jp/public/employees/106838';
+	$coconala_url = 'https://coconala.com/users/500654';
+	
 	$about = [
 		__("soundbag studioは、ソフトウェア開発と音楽制作という、全く異なる2つの事業を行っています。"),
 		__("考え方、脳の使い方から異なる2つの分野ですが、共通点もあります。"),
@@ -20,6 +26,13 @@
 		__("優柔不断と言われるかもしれませんが、私の中の知への欲求を満たすには、1つや2つでは到底足りないのです。")
 	];
 	
+	$software_request = [
+		__('ソフトウェア関連のご依頼は、直接依頼のほかに<a href="{0}">Lancers</a>、<a href="{1}">CrowdWorks</a>でも受け付けております。',[ $lancers_url, $crowdworks_url ]),
+		__('スキルについては<a href="{0}">GitHub</a>に個人で制作したものの一部を公開しています。',[ $github_url ]),
+		__('なお、このページはVPS(Ubuntu)、Apache、CakePHP、Bootstrapで制作されており、他にPostfixとDovecotでメールサーバとしても運用しています。'),
+		__('他にも様々な分野・技術を学んでいるため、「これできる？」などお気軽にご相談ください。')
+	];
+	
 	$music = [
 		__("音楽制作については、理論は後回しです。"),
 		__("もちろん、制作のうえで必要な理論はその都度学んではきましたが、最終的には経験と閃きが何よりも重要です。"),
@@ -30,6 +43,11 @@
 		__("そして、バンドサウンドや、そこに加わるホーン・ストリングスセクション、その他多彩な楽器。"),
 		__("既存曲の編曲から、オリジナル曲のアレンジまで。個人の活動から、プロ志向での活動まで。"),
 		__("あらゆる音楽活動を、全力でサポートしていきます。")
+	];
+	
+	$music_request = [
+		__('音楽制作のご依頼は、個人・非営利のお客様からは<a href="{0}">ココナラ</a>で承っております。',[ $coconala_url ]),
+		__('営利目的、法人のお客様は下のフォームからご連絡ください。')
 	];
 ?>
 <!DOCTYPE html>
@@ -125,6 +143,12 @@
               <p class="lead"><?= $lead ?></p>
           <?php endforeach; ?>
         </div>
+        <hr class="mx-0 mt-1 mb-4"/>
+        <div class="row">
+		  <?php foreach( $software_request as $lead ): ?>
+              <p class="lead"><?= $lead ?></p>
+          <?php endforeach; ?>
+        </div>
       </div>
     </section>
     
@@ -137,6 +161,12 @@
               <p class="lead"><?= $lead ?></p>
           <?php endforeach; ?>
         </div>
+        <hr class="mx-0 mt-1 mb-4"/>
+        <div class="row">
+		  <?php foreach( $music_request as $lead ): ?>
+              <p class="lead"><?= $lead ?></p>
+          <?php endforeach; ?>
+        </div>
       </div>
     </section>
 	
@@ -146,7 +176,7 @@
         <h2 class="text-center text-uppercase text-secondary mb-0">Contact</h2>
         <hr class="star-dark mb-5">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col bg-form container">
 			<?= $this->Form->create($contact) ?>
 			<div class="form-group"><?= $this->Form->control('name',  ['class' => 'form-control','label' => __('名前')])   ?></div>
 			<div class="form-group"><?= $this->Form->control('email', ['class' => 'form-control','label' => __('E-Mail')])  ?></div>
@@ -189,23 +219,23 @@
               </li>
               -->
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/westfence105">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="<?= $twitter_url ?>">
                   <i class="fa fa-fw fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/westfence105">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="<?= $github_url ?>">
                   <i class="fa fa-fw fa-github"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-				<a class="btn btn-outline-light text-center btn-txt" href="https://www.lancers.jp/profile/westfence105"><b>Lancers</b></a>
+				<a class="btn btn-outline-light text-center btn-txt" href="<?= $lancers_url ?>"><b>Lancers</b></a>
               </li>
               <li class="list-inline-item">
-				<a class="btn btn-outline-light text-center btn-txt" href="https://crowdworks.jp/public/employees/106838"><b>CrowdWorks</b></a>
+				<a class="btn btn-outline-light text-center btn-txt" href="<?= $crowdworks_url ?>"><b>CrowdWorks</b></a>
               </li>
               <li class="list-inline-item">
-				<a class="btn btn-outline-light text-center btn-txt" href="https://coconala.com/users/500654"><b>Coconala</b></a>
+				<a class="btn btn-outline-light text-center btn-txt" href="<?= $coconala_url ?>"><b>Coconala</b></a>
               </li>
             </ul>
           </div>
