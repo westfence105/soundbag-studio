@@ -8,14 +8,15 @@
 	$coconala_url = 'https://coconala.com/users/500654';
 	
 	$about = [
-		__("soundbag studioは、ソフトウェア開発と音楽制作という、全く異なる2つの事業を行っています。"),
-		__("考え方、脳の使い方から異なる2つの分野ですが、共通点もあります。"),
-		__("1つは、依頼者と細かくコミュニケーションを取りながらより良いものを創っていくということ。"),
+		__('フリーランスエンジニア、そして編曲家の<a href="#profile">soundbag</a>の公式サイトです。'),
+		__("soundbag studioでは、ソフトウェア開発と音楽制作という、全く異なる2つの事業を行っています。"),
+		__("考え方、脳の使い方から異なる2つの分野ですが、共通点もいくつかあります。"),
+		__("その1つは、依頼者と細かくコミュニケーションを取りながらより良いものを創っていくということ。"),
 		__("そして、自室が「スタジオ」となること。"),
 		__("4畳半の部屋の中から、世界と繋がり、新しいものを創り出していきます。")
 	];
 	
-	$software = [
+	$software_policy = [
 		__("ソフトウェア開発においては、理論的に、ひたすら考え抜いて制作を進めます。"),
 		__("頭の中で設計図を組み立て、それを文書に起こし、プログラムにしてゆく……"),
 		__("思ったとおりに動いたときの喜びと達成感は、何ものにも代えがたいものです。"),
@@ -27,9 +28,11 @@
 	];
 	
 	$software_request = [
+		__('エンジニアとしては、プロジェクトの一員として、基本的にリモートで業務を請け負っています。'),
+		__('特に分野を絞り込んでいるわけではなく、自分の技術で可能ならばなんでもやろうと考えています。'),
 		__('ソフトウェア関連のご依頼は、直接依頼のほかに<a href="{0}">Lancers</a>、<a href="{1}">CrowdWorks</a>でも受け付けております。',[ $lancers_url, $crowdworks_url ]),
 		__('スキルについては<a href="{0}">GitHub</a>に個人で制作したものの一部を公開しています。',[ $github_url ]),
-		__('なお、このページはVPS(Ubuntu)、Apache、CakePHP、Bootstrapで制作されており、他にPostfixとDovecotでメールサーバとしても運用しています。'),
+		__('また、このページはVPS(Ubuntu)、Apache、CakePHP、Bootstrapで制作されており、他にPostfixとDovecotでメールサーバとしても運用しています。'),
 		__('他にも様々な分野・技術を学んでいるため、「これできる？」などお気軽にご相談ください。')
 	];
 	
@@ -38,16 +41,18 @@
 		__("もちろん、制作のうえで必要な理論はその都度学んではきましたが、最終的には経験と閃きが何よりも重要です。"),
 		__("多くの音楽を聞き、時にはそれをコピーしてみたり、編曲してみたり、研究してみたり。"),
 		__("その経験が閃きを生み、そしてそれを理論と経験が形にしてゆきます。"),
-		__("趣味から始まって長く長くやってきた、シンプルなMIDIや吹奏楽編曲。"),
-		__("より大きなものに挑戦し、オーケストラ編曲。"),
+		__("趣味から始まって長く長くやってきた、シンプルなMIDIや吹奏楽編成。"),
+		__("より大きなものに挑戦し、オーケストラ編成。"),
 		__("そして、バンドサウンドや、そこに加わるホーン・ストリングスセクション、その他多彩な楽器。"),
 		__("既存曲の編曲から、オリジナル曲のアレンジまで。個人の活動から、プロ志向での活動まで。"),
 		__("あらゆる音楽活動を、全力でサポートしていきます。")
 	];
 	
 	$music_request = [
+		__('音楽関連では、主に編曲、楽譜制作、打ち込みでの音源制作を請け負っています。'),
 		__('音楽制作のご依頼は、個人・非営利のお客様からは<a href="{0}">ココナラ</a>で承っております。',[ $coconala_url ]),
-		__('営利目的、法人のお客様は下のフォームからご連絡ください。')
+		__('営利目的、法人のお客様は下のフォームからご連絡ください。'),
+		__('サンプルなどは随時更新してゆきます。また、イメージをお聞きして簡単なサンプルを制作することもできますので、お気軽にご相談ください。')
 	];
 ?>
 <!DOCTYPE html>
@@ -139,7 +144,7 @@
         <h2 class="text-center text-uppercase text-black">Software</h2>
         <hr class="star-dark mb-5">
         <div class="row">
-		  <?php foreach( $software as $lead ): ?>
+		  <?php foreach( $software_policy as $lead ): ?>
               <p class="lead"><?= $lead ?></p>
           <?php endforeach; ?>
         </div>
@@ -169,6 +174,53 @@
         </div>
       </div>
     </section>
+
+	<section id="profile">
+		<div class="container bg-white">
+			<h2 class="text-center text-uppercase text-secondary mb-0">Profile</h2>
+			<hr class="star-dark mb-5">
+			<div class="">
+				<?= $this->Html->image('profile_ym.png',['class' => 'img-fluid mb-3 d-block mx-auto','width' => '128', 'height' => '128']) ?>
+				<p class="text-center font-weight-bolder h3 mb-0">西垣 灯悟</p>
+				<p class="text-center h5 mt-0 mb-2">(soundbag)</p>
+				<p class="text-center mb-0">1995(平成7)年12月生まれ</p>
+				<p class="text-center mb-1">東京都町田市出身</p>
+				<p class="history">読書と音楽が好きで、中学時代は3年間吹奏楽部・図書委員</p>
+				<p class="history">病気により高校を中退し、それ以降も数年間療養</p>
+				<p class="history">その間自宅でプログラミングの技術を磨く</p>
+				<p class="history">並行してクラウドソーシングで音楽制作の依頼を請ける</p>
+				<p class="history">2018(平成30)年1月、個人事業主として開業</p>
+			</div>
+			<div class="ml-2 mr-4 mt-4" style="font-size: 0.8rem;">
+				<strong>特定商取引法に基づく表記</strong>
+				<table class="table table-bordered ml-2 p-1 w-100" cellpadding="4">
+					<tr><td>事業者名（屋号）</td><td>soundbag</td></tr>
+					<tr><td>代表・責任者</td><td>西垣 灯悟</td></tr>
+					<tr><td>WEBサイト</td><td>https://soundbag-studio.com/</td></tr>
+					<tr><td>メール</td><td>contact@soundbag-studio.com</td></tr>
+					<tr><td>所在地</td><td>東京都町田市 ※詳細はメールまたは問い合わせフォームよりお問い合わせください。</td></tr>
+					<tr><td>電話番号</td><td>090-3451-5397 ※電話でのお問合わせはご遠慮ください</td></tr>
+					<tr><td>業務内容</td>
+						<td><ul>
+							<li>ソフトウェアの開発・テスト</li>
+							<li>編曲、楽譜作成、音源作成</li>
+							<li>コンピュータ関連の設定、データ作成、操作サポートなど</li>
+							<li>作曲、音楽制作のサポートなど</li>
+						</ul></td>
+					</tr>
+					<tr><td>料金</td><td>各サイトに別途記載、記載されていないものについてはお問い合わせください。</td></tr>
+					<tr><td>報酬以外の必要料金</td><td>銀行振込の場合振込手数料、他サイト経由の場合当該サイトの利用手数料</td></tr>
+					<tr><td>注文方法</td><td>問い合わせフォーム・メールからの依頼<br>各クラウドソーシング経由での依頼</td></tr>
+					<tr><td>支払い方法</td><td>直接取引にの場合は銀行振込<br/>他サイト経由の場合は当該サイトの決済方法</td></tr>
+					<tr><td>支払い時期</td><td>直接取引の場合は着手金として2割、残りを納品またはプロジェクト終了後1週間以内<br/>他サイト利用の場合は当該サイトの規定に順ずる</td></tr>
+					<tr><td>納品までの期間</td><td>案件ごとに個別で見積もり、相談し決定</td></tr>
+					<tr><td>返品・キャンセル等</td><td>業務の性格上、お客様都合でのキャンセルはできません。<br/>やむなくキャンセルとなった場合も原則的にそれまで支払われた料金の返金はできかねますので予めご了承ください。</td></tr>
+					<tr><td>著作権の扱い</td><td>契約時に<b>契約書に明記</b>。<br/>※著作権のうち著作人格権は<b>譲渡することができません。</b>ご注意ください。</td></tr>
+				</table>
+				<p style="margin-left: 10vw; font-size: 0.8rem;">※省略されている事項については、問い合わせがあった場合遅滞なく開示するものとします。</p>
+			</div>
+		</div>
+	</section>
 	
     <!-- Contact Section -->
     <section id="contact">
@@ -247,7 +299,7 @@
       <div class="container">
 			<div>&copy;2018 soundbag-studio. All rights reserved.</div>
 			<div>Framework: <a href="https://cakephp.org/jp">CakePHP <?= Configure::version() ?></a></div>
-			<div>Design: <a href="https://startbootstrap.com/">Start Bootstrap - Freelancer</a><?php /* + α */ ?></div>
+			<div>Design: <a href="https://startbootstrap.com/">Start Bootstrap - Freelancer</a> + α</div>
       </div>
     </div>
 

@@ -10,12 +10,25 @@ a:hover {
 	color: #f88;
 }
 
+:not(nav) > .container {
+	width: 90%;
+	padding: 8% 5%;
+}
+
 .bg-primary {
 	background-color: #685!important;
 }
 
 button.bg-primary:focus, button.bg-primary:hover {
 	background-color: #8a6!important;
+}
+
+.bg-white {
+	background-color: #fff;
+}
+
+.bg-white hr:after {
+	background-color: #fff!important;
 }
 
 #mainNav {
@@ -79,6 +92,18 @@ header container {
 	background-color: #8cf!important;
 }
 
+#profile {
+	color: #000;
+	background-color: #ffa;
+}
+
+#profile div.container {
+}
+
+#profile hr:after {
+	background-color: #ffa;
+}
+
 .bg-form {
 	padding: 5vw;
 	background-color: #afc;
@@ -92,4 +117,10 @@ header container {
 
 .list-inline-item {
 	font-size: calc(18px * 0.25vw);
+}
+
+.history {
+	text-align: center;
+	font-size: 0.8rem;
+	margin-bottom: 0;
 }
