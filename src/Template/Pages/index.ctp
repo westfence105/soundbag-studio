@@ -186,8 +186,8 @@
 				<?= $this->Html->image('profile_ym.png',['class' => 'img-fluid mb-3 d-block mx-auto','width' => '128', 'height' => '128']) ?>
 				<p class="text-center font-weight-bolder h3 mb-0">西垣 灯悟</p>
 				<p class="text-center h5 mt-0 mb-2">(soundbag)</p>
-				<p class="text-center mb-0">1995(平成7)年12月生まれ</p>
-				<p class="text-center mb-1">東京都町田市出身</p>
+				<p class="history mb-0">1995(平成7)年12月生まれ</p>
+				<p class="history mb-1">東京都町田市出身</p>
 				<p class="history">読書と音楽が好きで、中学時代は3年間吹奏楽部・図書委員</p>
 				<p class="history">病気により高校を中退し、それ以降も数年間療養</p>
 				<p class="history">その間自宅でプログラミングの技術を磨く</p>
