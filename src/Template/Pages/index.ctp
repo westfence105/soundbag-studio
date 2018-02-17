@@ -97,22 +97,22 @@
           MENU
           <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse px-lg-2" id="navbarResponsive" style="font-size: 0.8rem;">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">ABOUT</a>
+              <a class="nav-link py-2 px-0 px-lg-2 rounded js-scroll-trigger" href="#about">ABOUT</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#software">SOFTWARE</a>
+              <a class="nav-link py-2 px-0 px-lg-2 rounded js-scroll-trigger" href="#software">SOFTWARE</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#music">MUSIC</a>
+              <a class="nav-link py-2 px-0 px-lg-2 rounded js-scroll-trigger" href="#music">MUSIC</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#profile">PROFILE</a>
+              <a class="nav-link py-2 px-0 px-lg-2 rounded js-scroll-trigger" href="#profile">PROFILE</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
+              <a class="nav-link py-2 px-0 px-lg-2 rounded js-scroll-trigger" href="#contact">CONTACT</a>
             </li>
           </ul>
         </div>
@@ -194,7 +194,7 @@
 				<p class="history">並行してクラウドソーシングで音楽制作の依頼を請ける</p>
 				<p class="history">2018(平成30)年1月、個人事業主として開業</p>
 			</div>
-			<div class="ml-2 mr-4 mt-4" style="font-size: 0.8rem;">
+			<div class="mx-4 mt-4" style="font-size: 0.8rem;">
 				<strong>特定商取引法に基づく表記</strong>
 				<table class="table table-bordered ml-2 p-1 w-100" cellpadding="4">
 					<tr><td>事業者名（屋号）</td><td>soundbag</td></tr>
