@@ -10,11 +10,6 @@ a:hover {
 	color: #f88;
 }
 
-:not(nav) > .container {
-	width: 100vw;
-	padding: 8% 0;
-}
-
 .bg-primary {
 	background-color: #685!important;
 }
@@ -38,7 +33,7 @@ button.bg-primary:focus, button.bg-primary:hover {
 
 header.masthead {
 	height: 100vh;
-	padding-top: 20vh!important;
+	padding-top: 30vh!important;
 	background-color: #44f!important;
 }
 
@@ -46,14 +41,9 @@ header hr:after {
 	background-color: #44f!important;
 }
 
-header .container {
-	
-}
-
-@media (max-width: 544px){
-
+@media (max-width: 768px){
 	header.masthead {
-		padding-top: 20vh!important;
+		padding-top: 25vh!important;
 	}
 }
 
@@ -128,9 +118,13 @@ header .container {
 #profile {
 	color: #000;
 	background-color: #ffa;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
 }
 
 #profile div.container {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 }
 
 #profile hr:after {

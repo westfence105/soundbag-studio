@@ -121,8 +121,7 @@
 
     <!-- Header -->
     <header class="masthead bg-title text-white text-center va-middle">
-      <div class="container main-title">
-     <!--   <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt=""> -->
+      <div class="container-fluid main-title">
         <h1 class="font-weight-bold mb-0 text-center">soundbag</h1>
         <hr class="star-light">
         <div class="sb-flex-row w-100">
@@ -138,7 +137,7 @@
       <div class="container">
         <h2 class="text-center text-uppercase">About</h2>
         <hr class="star-light mb-5">
-        <div class="row">
+        <div class="container">
 		  <?php foreach( $about as $lead ): ?>
               <p class="lead"><?= $lead ?></p>
           <?php endforeach; ?>
@@ -150,13 +149,13 @@
       <div class="container">
         <h2 class="text-center text-uppercase text-black">Software</h2>
         <hr class="star-dark mb-5">
-        <div class="row">
+        <div class="container">
 		  <?php foreach( $software_policy as $lead ): ?>
               <p class="lead"><?= $lead ?></p>
           <?php endforeach; ?>
         </div>
         <hr class="mx-0 mt-1 mb-4"/>
-        <div class="row">
+        <div class="container">
 		  <?php foreach( $software_request as $lead ): ?>
               <p class="lead"><?= $lead ?></p>
           <?php endforeach; ?>
@@ -168,13 +167,13 @@
       <div class="container">
         <h2 class="text-center text-uppercase">Music</h2>
         <hr class="star-dark mb-5">
-        <div class="row">
+        <div class="container">
 		  <?php foreach( $music as $lead ): ?>
               <p class="lead"><?= $lead ?></p>
           <?php endforeach; ?>
         </div>
         <hr class="mx-0 mt-1 mb-4"/>
-        <div class="row">
+        <div class="container">
 		  <?php foreach( $music_request as $lead ): ?>
               <p class="lead"><?= $lead ?></p>
           <?php endforeach; ?>
@@ -235,7 +234,7 @@
         <h2 class="text-center text-uppercase text-secondary mb-0">Contact</h2>
         <hr class="star-dark mb-5">
         <div class="row">
-          <div class="col bg-form container">
+          <div class="col bg-form container mx-3">
 			<?= $this->Form->create($contact) ?>
 			<div class="form-group"><?= $this->Form->control('name',  ['class' => 'form-control','label' => __('名前')])   ?></div>
 			<div class="form-group"><?= $this->Form->control('email', ['class' => 'form-control','label' => __('E-Mail')])  ?></div>
