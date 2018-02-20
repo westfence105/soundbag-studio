@@ -85,6 +85,7 @@
 		);
 	 ?>
 
+	<meta name="google-site-verification" content="KtLgpVODnvoMaXCgDVlmGH34kV_VeDk7h9PRQyjn5Ds" />
   </head>
 
   <body id="page-top">
