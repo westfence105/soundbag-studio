@@ -11,8 +11,8 @@ a:hover {
 }
 
 :not(nav) > .container {
-	width: 90%;
-	padding: 8% 5%;
+	width: 100vw;
+	padding: 8% 0;
 }
 
 .bg-primary {
@@ -38,7 +38,7 @@ button.bg-primary:focus, button.bg-primary:hover {
 
 header.masthead {
 	height: 100vh;
-	padding-top: 40vh;
+	padding-top: 20vh!important;
 	background-color: #44f!important;
 }
 
@@ -46,8 +46,41 @@ header hr:after {
 	background-color: #44f!important;
 }
 
-header container {
+header .container {
 	
+}
+
+@media (max-width: 544px){
+
+	header.masthead {
+		padding-top: 20vh!important;
+	}
+}
+
+.sb-flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+@media (max-width: 768px){
+	.sb-flex-row {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.sb-flex-row .text-right,
+	.sb-flex-row .text-left {
+		text-align: center!important;
+	}
+	
+	.sb-flex-row .w-50 {
+		width: 100%!important;
+	}
+	
+	.sb-flex-row .h3 {
+		font-size: 1.5rem;
+	}
 }
 
 #about {

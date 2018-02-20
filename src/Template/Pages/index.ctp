@@ -121,11 +121,15 @@
 
     <!-- Header -->
     <header class="masthead bg-title text-white text-center va-middle">
-      <div class="container">
+      <div class="container main-title">
      <!--   <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt=""> -->
-        <h1 class="font-weight-bold mb-0">soundbag</h1>
+        <h1 class="font-weight-bold mb-0 text-center">soundbag</h1>
         <hr class="star-light">
-        <h2 class="font-weight-light mb-0">Software Engineer &amp; Sound Producer</h2>
+        <div class="sb-flex-row w-100">
+			<div class="h3 px-0 w-50 text-right">Software Engineer</div>
+			<div class="h3 px-3">&amp;</div>
+			<div class="h3 px-0 w-50 text-left">Sound Producer</div>
+		</div>
       </div>
     </header>
 
