@@ -54,5 +54,6 @@ class AppController extends Controller
     
     public function beforeFilter( Event $event ){
 		$this->set('tb_footer','Element/footer');
+		$this->response = $this->response->withSharable( true, 0 );
 	}
 }
