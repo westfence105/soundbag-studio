@@ -60,8 +60,9 @@
   <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="soundbag studio: site of promote freelancer soundbag.">
+    <meta name="description" content="フリーランスエンジニア、編曲家のsoundbagの公式サイト。ソフトウェア開発、WEB開発、編曲、音源制作、作曲など多様な依頼に対応します。">
     <meta name="author" content="soundbag">
+	<meta name="google-site-verification" content="KtLgpVODnvoMaXCgDVlmGH34kV_VeDk7h9PRQyjn5Ds" />
     
     <title>soundbag studio</title>
     
@@ -85,7 +86,6 @@
 		);
 	 ?>
 
-	<meta name="google-site-verification" content="KtLgpVODnvoMaXCgDVlmGH34kV_VeDk7h9PRQyjn5Ds" />
   </head>
 
   <body id="page-top">
