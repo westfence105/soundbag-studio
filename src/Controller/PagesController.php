@@ -85,7 +85,13 @@ class PagesController extends AppController
 				$this->Flash->error(__('フォームの内容が不正、または内部エラーが発生しました。'));
 			}
 		}
-		
 		$this->set('contact',$contact);
+        
+        $this->loadModel('Articles');
+        $article_list = $this->Articles->getList();
+        $this->set( 'article_list', $article_list );
+        foreach( $article_list as $key ){
+            $this->set( $key, $this->Articles->get( $key ) );
+        }
 	}
 }

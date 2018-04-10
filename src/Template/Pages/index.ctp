@@ -6,54 +6,6 @@
 	$lancers_url = 'https://www.lancers.jp/profile/westfence105';
 	$crowdworks_url = 'https://crowdworks.jp/public/employees/106838';
 	$coconala_url = 'https://coconala.com/users/500654';
-	
-	$about = [
-		__('フリーランスエンジニア、そして編曲家の<a href="#profile">soundbag</a>の公式サイトです。'),
-		__("soundbag studioでは、ソフトウェア開発と音楽制作という、全く異なる2つの事業を行っています。"),
-		__("考え方、脳の使い方から異なる2つの分野ですが、共通点もいくつかあります。"),
-		__("その1つは、依頼者と細かくコミュニケーションを取りながらより良いものを創っていくということ。"),
-		__("そして、自室が「スタジオ」となること。"),
-		__("4畳半の部屋の中から、世界と繋がり、新しいものを創り出していきます。")
-	];
-	
-	$software_policy = [
-		__("ソフトウェア開発においては、理論的に、ひたすら考え抜いて制作を進めます。"),
-		__("頭の中で設計図を組み立て、それを文書に起こし、プログラムにしてゆく……"),
-		__("思ったとおりに動いたときの喜びと達成感は、何ものにも代えがたいものです。"),
-		__("開発の対象は多岐にわたり、小さなコマンドラインツールからゲーム、パッケージソフトウェア、WEBサイト、組み込み・制御機器まで、あらゆる分野に挑戦しています。"),
-		__("プログラミング言語についても、C++、Python、PHPのほか、C、Java、C#、Ruby、JavaScript、R、go、そしてアセンブラやAda。"),
-		__("フレームワークやライブラリも、STL、Boost、SDL、OpenGL、Qt、Unity、cocos2d-x、Rails、CakePHP、jQueryなど。"),
-		__("様々なものに興味を持ち、学習し、吸収し、習得し、言語の背景にある思想を学び、ここまで来ました。そして、これからも。"),
-		__("優柔不断と言われるかもしれませんが、私の中の知への欲求を満たすには、1つや2つでは到底足りないのです。")
-	];
-	
-	$software_request = [
-		__('エンジニアとしては、プロジェクトの一員として、基本的にリモートで業務を請け負っています。'),
-		__('特に分野を絞り込んでいるわけではなく、自分の技術で可能ならばなんでもやろうと考えています。'),
-		__('ソフトウェア関連のご依頼は、直接依頼のほかに<a href="{0}">Lancers</a>、<a href="{1}">CrowdWorks</a>でも受け付けております。',[ $lancers_url, $crowdworks_url ]),
-		__('スキルについては<a href="{0}">GitHub</a>に個人で制作したものの一部を公開しています。',[ $github_url ]),
-		__('また、このページはVPS(Ubuntu)、Apache、CakePHP、Bootstrapで制作されており、他にPostfixとDovecotでメールサーバとしても運用しています。'),
-		__('他にも様々な分野・技術を学んでいるため、「これできる？」などお気軽にご相談ください。')
-	];
-	
-	$music = [
-		__("音楽制作については、理論は後回しです。"),
-		__("もちろん、制作のうえで必要な理論はその都度学んではきましたが、最終的には経験と閃きが何よりも重要です。"),
-		__("多くの音楽を聞き、時にはそれをコピーしてみたり、編曲してみたり、研究してみたり。"),
-		__("その経験が閃きを生み、そしてそれを理論と経験が形にしてゆきます。"),
-		__("趣味から始まって長く長くやってきた、シンプルなMIDIや吹奏楽編成。"),
-		__("より大きなものに挑戦し、オーケストラ編成。"),
-		__("そして、バンドサウンドや、そこに加わるホーン・ストリングスセクション、その他多彩な楽器。"),
-		__("既存曲の編曲から、オリジナル曲のアレンジまで。個人の活動から、プロ志向での活動まで。"),
-		__("あらゆる音楽活動を、全力でサポートしていきます。")
-	];
-	
-	$music_request = [
-		__('音楽関連では、主に編曲、楽譜制作、打ち込みでの音源制作を請け負っています。'),
-		__('音楽制作のご依頼は、個人・非営利のお客様からは<a href="{0}">ココナラ</a>で承っております。',[ $coconala_url ]),
-		__('営利目的、法人のお客様は下のフォームからご連絡ください。'),
-		__('サンプルなどは随時更新してゆきます。また、イメージをお聞きして簡単なサンプルを制作することもできますので、お気軽にご相談ください。')
-	];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,15 +52,12 @@
         </button>
         <div class="collapse navbar-collapse px-lg-2" id="navbarResponsive" style="font-size: 0.8rem;">
           <ul class="navbar-nav ml-auto">
+					<?php foreach( $article_list as $article_title ): ?>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-2 px-0 px-lg-2 rounded js-scroll-trigger" href="#about">ABOUT</a>
+              <a class="nav-link py-2 px-0 px-lg-2 rounded js-scroll-trigger text-uppercase" href="#<?= $article_title ?>">
+								<?= $article_title ?></a>
             </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-2 px-0 px-lg-2 rounded js-scroll-trigger" href="#software">SOFTWARE</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-2 px-0 px-lg-2 rounded js-scroll-trigger" href="#music">MUSIC</a>
-            </li>
+					<?php endforeach; ?>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-2 px-0 px-lg-2 rounded js-scroll-trigger" href="#profile">PROFILE</a>
             </li>
@@ -139,9 +88,9 @@
         <h2 class="text-center text-uppercase">About</h2>
         <hr class="star-light mb-5">
         <div class="container">
-		  <?php foreach( $about as $lead ): ?>
-              <p class="lead"><?= $lead ?></p>
-          <?php endforeach; ?>
+				<?php foreach( $about as $line ): ?>
+					<?= $line ?>
+        <?php endforeach; ?>
         </div>
       </div>
     </section>
@@ -151,15 +100,9 @@
         <h2 class="text-center text-uppercase text-black">Software</h2>
         <hr class="star-dark mb-5">
         <div class="container">
-		  <?php foreach( $software_policy as $lead ): ?>
-              <p class="lead"><?= $lead ?></p>
-          <?php endforeach; ?>
-        </div>
-        <hr class="mx-0 mt-1 mb-4"/>
-        <div class="container">
-		  <?php foreach( $software_request as $lead ): ?>
-              <p class="lead"><?= $lead ?></p>
-          <?php endforeach; ?>
+				<?php foreach( $software as $line ): ?>
+					<?= $line ?>
+        <?php endforeach; ?>
         </div>
       </div>
     </section>
@@ -169,15 +112,9 @@
         <h2 class="text-center text-uppercase">Music</h2>
         <hr class="star-dark mb-5">
         <div class="container">
-		  <?php foreach( $music as $lead ): ?>
-              <p class="lead"><?= $lead ?></p>
-          <?php endforeach; ?>
-        </div>
-        <hr class="mx-0 mt-1 mb-4"/>
-        <div class="container">
-		  <?php foreach( $music_request as $lead ): ?>
-              <p class="lead"><?= $lead ?></p>
-          <?php endforeach; ?>
+				<?php foreach( $music as $line ): ?>
+					<?= $line ?>
+        <?php endforeach; ?>
         </div>
       </div>
     </section>
